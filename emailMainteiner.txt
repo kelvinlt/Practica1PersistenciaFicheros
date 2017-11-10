@@ -1,0 +1,7 @@
+From: owner@bugs.debian.org
+To: joeyh@debian.org
+Dear Joey Hess
+You have a new bug:
+debhelper RC bug number #88010
+Please, fix it as soon as possible.
+Cheers

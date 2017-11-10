@@ -42,8 +42,7 @@ public class main {
                     respuesta[1] = temp[1];
                 }
             }
-            fr.close();
-
+            br.close();
 
         } catch (Exception e) {
 
@@ -67,7 +66,7 @@ public class main {
                     respuesta[1] = temp[2];
                 }
             }
-            fr.close();
+            br.close();
         }catch (Exception e){
 
         }
@@ -86,22 +85,22 @@ public class main {
             BufferedWriter bw = new BufferedWriter(fw);
 
             System.out.println("");
-            String emailToSend = "From: owner@bugs.debian.org";
-//                    + System.getProperty("line.separator") +
-//                    "To: "+respuesta2[1]+""
-//                    + System.getProperty("line.separator") +
-//                    "Dear "+respuesta2[0]+""
-//                    + System.getProperty("line.separator") +
-//                    "You have a new bug:"
-//                    + System.getProperty("line.separator") +
-//                    ""+respuesta1[1]+" RC bug number #"+respuesta1[0]+""
-//                    + System.getProperty("line.separator") +
-//                    "Please, fix it as soon as possible."
-//                    + System.getProperty("line.separator") +
-//                    "Cheers";
+            String emailToSend = "From: owner@bugs.debian.org"
+                    + System.getProperty("line.separator") +
+                    "To: "+respuesta2[1]+""
+                    + System.getProperty("line.separator") +
+                    "Dear "+respuesta2[0]+""
+                    + System.getProperty("line.separator") +
+                    "You have a new bug:"
+                    + System.getProperty("line.separator") +
+                    ""+respuesta1[1]+" RC bug number #"+respuesta1[0]+""
+                    + System.getProperty("line.separator") +
+                    "Please, fix it as soon as possible."
+                    + System.getProperty("line.separator") +
+                    "Cheers";
             System.out.println(emailToSend);
             bw.write(emailToSend);
-
+            bw.close();
         }catch (Exception e){
         }
     }
@@ -126,6 +125,4 @@ public class main {
         } while (error);
         return texto;
     }
-
-
 }
